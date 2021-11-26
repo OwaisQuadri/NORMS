@@ -1,5 +1,4 @@
 #drop and create new tables
-CREATE SCHEMA `dms-project` ;
 use `dms-project`;
 DROP TABLE IF EXISTS Customers, Rentals, Payment, Store, Vehicle;
 CREATE TABLE Customers (

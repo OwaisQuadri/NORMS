@@ -61,3 +61,16 @@ function mouseover(id, enter) {
     }
 
 }
+const setPrice = function (x, price) {
+    var pickup_date = new Date($('#pickup' + x).val());
+    var dropoff_date = new Date($('#dropoff' + x).val());
+    var diffTime = Math.abs(dropoff_date - pickup_date);
+    var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
+    if (!(diffDays >= 0)) {
+        diffDays = 0
+    }
+
+    var totalPrice = diffDays * price;
+    var out = (Math.round(totalPrice * 100) / 100).toFixed(2);
+    document.getElementById("price" + x).value = out;
+}

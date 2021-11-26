@@ -1,3 +1,13 @@
+<?php
+session_start(); // Start the session
+
+// If a message is passed here, then this block is used to display it
+if (isset($_SESSION["message"])) {
+    echo "<script type='text/javascript'> alert(" . "'" . $_SESSION["message"] . "'" . "); </script>";
+}
+unset($_SESSION['message']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
