@@ -10,11 +10,6 @@ if (!$connection) {
         $_SESSION["message"] = "No Data Found!";
         header("location: index.php");
     } else {
-
-
-
-
-
         $first_name = mysqli_real_escape_string($connection, $_POST['fname']);
         $last_name = mysqli_real_escape_string($connection, $_POST['lname']);
         $phone_num = mysqli_real_escape_string($connection, $_POST['pn']);
